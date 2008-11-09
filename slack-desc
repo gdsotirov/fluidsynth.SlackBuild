@@ -1,0 +1,11 @@
+fluidsynth: FluidSynth ()
+fluidsynth:
+fluidsynth: FluidSynth is a real-time software synthesizer based on
+fluidsynth: the SoundFont 2 specifications.  It can be used to render MIDI
+fluidsynth: input or MIDI files to audio.  The MIDI events are read from
+fluidsynth: a MIDI device.  The sound is rendered in real-time to the sound
+fluidsynth: output device. 
+fluidsynth:
+fluidsynth:
+fluidsynth:
+fluidsynth: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
