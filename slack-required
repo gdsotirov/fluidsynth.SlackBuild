@@ -1,0 +1,8 @@
+alsa-lib >= 1.0.15
+e2fsprogs >= 1.40.8
+glibc-solibs >= 2.7
+jack >= 0.109.2
+lash >= 0.5.4
+libtermcap >= 1.2.3
+ncurses >= 5.6
+readline >= 5.2
