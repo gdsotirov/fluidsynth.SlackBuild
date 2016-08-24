@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: fluidsynth.SlackBuild,v 1.6 2016/08/24 20:35:02 gsotirov Exp $
+# $Id: fluidsynth.SlackBuild,v 1.7 2016/08/24 20:42:24 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=fluidsynth
-VERSION=1.1.5
+VERSION=1.1.6
 BUILD=${BUILD:-1}
 ARCH=${ARCH:-i486}
 
