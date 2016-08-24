@@ -19,15 +19,15 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: fluidsynth.SlackBuild,v 1.7 2016/08/24 20:42:24 gsotirov Exp $
+# $Id: fluidsynth.SlackBuild,v 1.8 2016/08/24 21:23:36 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=fluidsynth
 VERSION=1.1.6
+ARCH=${ARCH:-i586}
 BUILD=${BUILD:-1}
-ARCH=${ARCH:-i486}
 
 CWD=${CWD:-`pwd`}
 TMP=${TMP:-/tmp}
@@ -65,11 +65,10 @@ CXXFLAGS=$SLKCFLAGS \
             --sysconfdir=/etc \
             --mandir=/usr/man \
             --enable-shared=yes \
-            --enable-static=no \
-            --enable-ladspa || exit 4
+            --enable-static=no || exit 4
 
 # Build & install
-make -j4 || exit 5
+make -j || exit 5
 make DESTDIR=$PKG install || exit 6
 
 # Prepare
@@ -81,13 +80,11 @@ gzip_man $PKG
 install -m 755 -d $PKG/install
 install -m 644 $CWD/slack-desc     $PKG/install/slack-desc
 install -m 644 $CWD/slack-required $PKG/install/slack-required
-install -m 644 $CWD/slack-suggests $PKG/install/slack-suggests
 
 SBDIR=$PKG/usr/src/slackbuilds/$NAME-$VERSION
 install -m 755 -d $SBDIR
 install -m 644 $CWD/slack-desc       $SBDIR/slack-desc
 install -m 644 $CWD/slack-required   $SBDIR/slack-required
-install -m 644 $CWD/slack-suggests   $SBDIR/slack-suggests
 install -m 644 $CWD/$NAME.SlackBuild $SBDIR/$NAME.SlackBuild
 
 # Assemble
